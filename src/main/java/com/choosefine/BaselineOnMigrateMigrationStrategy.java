@@ -11,8 +11,8 @@ public class BaselineOnMigrateMigrationStrategy implements FlywayMigrationStrate
 
     @Override
     public void migrate(Flyway flyway) {
-//        flyway.setLocations();
-//        flyway.setBaselineVersion(MigrationVersion.fromVersion("1.1"));
+        flyway.setLocations("db/migration","db/migration/testLocation");
+        flyway.setBaselineVersion(MigrationVersion.fromVersion("3.1"));
         flyway.migrate();
 
     }
